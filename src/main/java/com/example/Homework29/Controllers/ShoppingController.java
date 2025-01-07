@@ -14,20 +14,20 @@ import java.util.Map;
 @RequestMapping("/store/order")
 public class ShoppingController {
 
-    private ShoppingService shopService;
+    private final ShoppingService shopService;
 
-    public ShoppingController (ShoppingService shopService){
+    public ShoppingController(ShoppingService shopService) {
         this.shopService = shopService;
     }
 
     @GetMapping(path = "/add")
-    public String addItem (@RequestParam int ID, @RequestParam String name){
-     return shopService.add(ID,name);                                                 // не могу додумать что должно быть в поле
+    public String add(@RequestParam Map<Integer, String> items) {
+        return shopService.add(items);
     }
 
     @GetMapping(path = "/get")
-    public Goods getItem(@RequestParam int ID){
-     shopService.get();
-     return (Goods) Map.of();
+    public Map<Integer,String> get(){
+       return shopService.get();
     }
+
 }

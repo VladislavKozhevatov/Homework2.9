@@ -13,6 +13,9 @@ public class ShoppingСart {                                            //соз
 
 public  Map <Integer, String> order;                                    // Форму заказа хочу создать через MaP (где ключ int ID , но так же есть и значение объекта String
 
+    public ShoppingСart(Map<Integer, String> order) {
+        this.order = order;
+    }
 
     public void addOrder (Map<Integer,String> order){                   //метод для добавления заказа
         order.putAll(order);
