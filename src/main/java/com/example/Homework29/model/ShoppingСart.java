@@ -22,6 +22,7 @@ public  Map <Integer, String> order;                                    // Фо�
         return order;
     }
 
+
     public void setOrder(Map<Integer, String> order) {
         this.order = order;
     }

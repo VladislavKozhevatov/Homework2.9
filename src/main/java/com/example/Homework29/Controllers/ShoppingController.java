@@ -30,5 +30,4 @@ public class ShoppingController {
      shopService.get();
      return (Goods) Map.of();
     }
-
 }

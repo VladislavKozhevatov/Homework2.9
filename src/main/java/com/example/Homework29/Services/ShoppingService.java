@@ -25,7 +25,6 @@ public class ShoppingService implements OrderService {
         this.goods = new HashMap<Integer, String>();
     }
 
-
     @Override
     public String add(Map<Integer, String> order) {                       // инжектятся методы интерфейса add
         shoppingСart.addOrder(order);                                             // добавление товара в корзину
